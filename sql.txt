@@ -1,0 +1,17 @@
+create view kunciku
+AS
+SELECT pengguna.id_pengguna, pengguna.nama_p, tap.tanggal
+FROM pengguna, tap
+WHERE pengguna.id_pengguna=tap.id_pengguna;
+
+SELECT tap.id_pengguna, tap.tanggal, pengguna.nama_p 
+FROM tap, pengguna
+WHERE tap.id_pengguna=pengguna.id_pengguna;
+
+SELECT pengguna.id_pengguna, pengguna.nama_p, tap.id_tap, tap.tanggal
+FROM pengguna, tap
+WHERE pengguna.id_pengguna=tap.id_pengguna;
+
+0x40x360x380xB20x210x250x80 Ikhsan
+0x40x5E0x910xE20x9E0x4F0x80 Alit
+0x50x8A0x990x1E0x590x310x0 Maulyanda
