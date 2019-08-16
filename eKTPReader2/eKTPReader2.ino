@@ -43,6 +43,12 @@ void setup(void) {
   uint8_t card2[] =  { 0x5, 0x8A, 0x99, 0x1E, 0x59, 0x31, 0x0 };  //card 2 Maul
   uint8_t card3[] =  { 0x4, 0x5E, 0x91, 0xE2, 0x9E, 0x4F, 0x80 }; //card 3 Alit
   uint8_t card4[] =  { 0x4, 0x31, 0x57, 0x5A, 0x7D, 0x5B, 0x80 }; // card 4 Cahya 
+  uint8_t card5[] =  { 0x4, 0x23, 0x24, 0xFA, 0x80, 0x5B, 0x80 }; //card 5 Raziq 
+  uint8_t card6[] =  { 0x4, 0x1E, 0x60, 0x6A, 0xC6, 0x61, 0x80 }; //card 6 Pak Fachri
+  uint8_t card7[] =  { 0x4, 0x1C, 0x2E, 0xA, 0x42, 0x2A, 0x80 }; //card 7 Pak Rolly
+  uint8_t card8[] =  { 0x4, 0x60, 0x59, 0xCA, 0x5B, 0x2A, 0x80 }; //card 8 Adit 
+  uint8_t card9[] =  { 0, 0, 0, 0, 0, 0, 0 }; //card 9 Rifa
+  uint8_t card10[] =  { 0, 0, 0, 0, 0, 0, 0 }; //card 10 Faisal
 
 void loop() {
   // put your main code here, to run repeatedly:
@@ -74,6 +80,12 @@ void loop() {
     int card2matches=0;
     int card3matches=0;
     int card4matches=0;
+    int card5matches=0;
+    int card6matches=0;
+    int card7matches=0;
+    int card8matches=0;
+    int card9matches=0;
+    int card10matches=0;
 
     for(i=0;i<7;i++)
     {
@@ -93,6 +105,30 @@ void loop() {
       {
         card4matches++;      
       }
+      if(uid[i] == card5[i])
+      {
+        card5matches++;      
+      }
+      if(uid[i] == card6[i])
+      {
+        card6matches++;      
+      }
+      if(uid[i] == card7[i])
+      {
+        card7matches++;      
+      }
+      if(uid[i] == card8[i])
+      {
+        card8matches++;      
+      }
+      if(uid[i] == card9[i])
+      {
+        card9matches++;      
+      }
+      if(uid[i] == card10[i])
+      {
+        card10matches++;      
+      }
     }
 
     if(card1matches == 7)
@@ -108,6 +144,30 @@ void loop() {
       Unlock();
     }
     if(card4matches == 7)
+    {
+      Unlock();
+    }
+    if(card5matches == 7)
+    {
+      Unlock();
+    }
+    if(card6matches == 7)
+    {
+      Unlock();
+    }
+    if(card7matches == 7)
+    {
+      Unlock();
+    }
+    if(card8matches == 7)
+    {
+      Unlock();
+    }
+    if(card9matches == 7)
+    {
+      Unlock();
+    }
+    if(card10matches == 7)
     {
       Unlock();
     }

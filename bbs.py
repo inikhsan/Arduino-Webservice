@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request, make_response
 import jwt
 import datetime
 from functools import wraps
-import pliku
+# import pliku
 
 app = Flask(__name__)
 
@@ -30,25 +30,25 @@ def unprotected():
     return jsonify({'message' : 'Aing teu ngarti!!'})
 
 @app.route('/protected')
-@token_required
+# @token_required
 def protected():
     return jsonify({'message' : 'Cuman bisa dipake orang yang punya token bener!'})   
 
-@app.route('/api/<crot>',methods=['POST', 'GET'])
-@token_required
-def crot(crot):
-    if request.method=='POST':
-        msg = request.form['msg']
-        pwd = request.form['pwd']
-        return pliku.AESCipher(pwd).encrypt(msg).decode('utf-8')
-    else:
-      return "error"    
+# @app.route('/api/<crot>',methods=['POST', 'GET'])
+# @token_required
+# def crot(crot):
+#     if request.method=='POST':
+#         msg = request.form['msg']
+#         pwd = request.form['pwd']
+#         return pliku.AESCipher(pwd).encrypt(msg).decode('utf-8')
+#     else:
+#       return "error"    
 
 @app.route('/login')
 def login():
     auth = request.authorization
 
-    if auth and auth.password == 'ikhsan':
+    if auth and auth.password == 'password':
         token = jwt.encode({'user' : auth.username, 'exp' : datetime.datetime.utcnow() + datetime.timedelta(minutes=15)}, app.config['SECRET_KEY'])
 
         return jsonify({'token' : token.decode('UTF-8')})
