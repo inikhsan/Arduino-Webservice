@@ -48,7 +48,7 @@ def protected():
 def login():
     auth = request.authorization
 
-    if auth and auth.password == 'password':
+    if auth and auth.password == 'admin':
         token = jwt.encode({'user' : auth.username, 'exp' : datetime.datetime.utcnow() + datetime.timedelta(minutes=15)}, app.config['SECRET_KEY'])
 
         return jsonify({'token' : token.decode('UTF-8')})
