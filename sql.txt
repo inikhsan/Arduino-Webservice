@@ -17,4 +17,6 @@ WHERE pengguna.id_pengguna=tap.id_pengguna;
 0x50x8A0x990x1E0x590x310x0 Maulyanda
 
 
-boom http://asampadeh.herokuapp.com/lala -c 10 -n 100
+boom http://asampadeh.herokuapp.com/login -c 10 -n 100
+
+boom http://127.0.0.1:80/login -c 10 -n 100
