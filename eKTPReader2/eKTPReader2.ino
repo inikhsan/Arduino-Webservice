@@ -48,8 +48,13 @@ void setup(void) {
   uint8_t card7[] =  { 0x4, 0x1C, 0x2E, 0xA, 0x42, 0x2A, 0x80 }; //card 7 Pak Rolly
   uint8_t card8[] =  { 0x4, 0x60, 0x59, 0xCA, 0x5B, 0x2A, 0x80 }; //card 8 Adit 
   uint8_t card9[] =  { 0x4, 0x84, 0x7A, 0x5A, 0x81, 0x2A, 0x80 }; //card 9 Rifa
-  uint8_t card10[] =  { 0x4, 0x8A, 0x61, 0xBA, 0x41, 0x2A, 0x80}; //card 10 Faisal
-
+  uint8_t card10[] =  { 0x4, 0x8B, 0x47, 0xE2, 0x3, 0x2B, 0x80 }; //card 10 Asep 
+  uint8_t card11[] =  { 0x4, 0x8A, 0x61, 0xBA, 0x41, 0x2A, 0x80 }; //card 11 Faisal
+  uint8_t card12[] =  { 0x4, 0x42, 0x79, 0xB2, 0x4E, 0x44, 0x80 }; //card 12 Nia (tingkat 1)
+  uint8_t card13[] =  { 0, 0, 0, 0, 0, 0, 0 }; //card 13 
+  uint8_t card14[] =  { 0, 0, 0, 0, 0, 0, 0 }; //card 14 
+  uint8_t card15[] =  { 0, 0, 0, 0, 0, 0, 0 }; //card 15 
+  
 void loop() {
   // put your main code here, to run repeatedly:
   boolean success;
@@ -86,7 +91,12 @@ void loop() {
     int card8matches=0;
     int card9matches=0;
     int card10matches=0;
-
+    int card11matches=0;
+    int card12matches=0;
+    int card13matches=0;
+    int card14matches=0;
+    int card15matches=0;
+  
     for(i=0;i<7;i++)
     {
       if(uid[i] == card1[i])
@@ -129,6 +139,26 @@ void loop() {
       {
         card10matches++;      
       }
+      if(uid[i] == card11[i])
+      {
+        card11matches++;      
+      }
+      if(uid[i] == card12[i])
+      {
+        card12matches++;      
+      }
+      if(uid[i] == card13[i])
+      {
+        card13matches++;      
+      }
+      if(uid[i] == card14[i])
+      {
+        card14matches++;      
+      }
+      if(uid[i] == card15[i])
+      {
+        card15matches++;      
+      }
     }
 
     if(card1matches == 7)
@@ -168,6 +198,26 @@ void loop() {
       Unlock();
     }
     if(card10matches == 7)
+    {
+      Unlock();
+    }
+    if(card11matches == 7)
+    {
+      Unlock();
+    }
+    if(card12matches == 7)
+    {
+      Unlock();
+    }
+    if(card13matches == 7)
+    {
+      Unlock();
+    }
+    if(card14matches == 7)
+    {
+      Unlock();
+    }
+    if(card15matches == 7)
     {
       Unlock();
     }
