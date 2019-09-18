@@ -51,7 +51,7 @@ void setup(void) {
   uint8_t card10[] =  { 0x4, 0x8B, 0x47, 0xE2, 0x3, 0x2B, 0x80 }; //card 10 Asep 
   uint8_t card11[] =  { 0x4, 0x8A, 0x61, 0xBA, 0x41, 0x2A, 0x80 }; //card 11 Faisal
   uint8_t card12[] =  { 0x4, 0x42, 0x79, 0xB2, 0x4E, 0x44, 0x80 }; //card 12 Nia (tingkat 1)
-  uint8_t card13[] =  { 0, 0, 0, 0, 0, 0, 0 }; //card 13 
+  uint8_t card13[] =  { 0x4, 0x33, 0x3B, 0x4A, 0x5, 0x2B, 0x80 }; //card 13 Pak Yusril
   uint8_t card14[] =  { 0, 0, 0, 0, 0, 0, 0 }; //card 14 
   uint8_t card15[] =  { 0, 0, 0, 0, 0, 0, 0 }; //card 15 
   
