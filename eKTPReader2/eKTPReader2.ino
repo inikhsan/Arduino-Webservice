@@ -43,17 +43,23 @@ void setup(void) {
   uint8_t card2[] =  { 0x5, 0x8A, 0x99, 0x1E, 0x59, 0x31, 0x0 };  //card 2 Maul
   uint8_t card3[] =  { 0x4, 0x5E, 0x91, 0xE2, 0x9E, 0x4F, 0x80 }; //card 3 Alit
   uint8_t card4[] =  { 0x4, 0x31, 0x57, 0x5A, 0x7D, 0x5B, 0x80 }; // card 4 Cahya 
-  uint8_t card5[] =  { 0x4, 0x23, 0x24, 0xFA, 0x80, 0x5B, 0x80 }; //card 5 Raziq 
+  uint8_t card5[] =  { 0, 0, 0, 0, 0, 0, 0 }; //card 5 
   uint8_t card6[] =  { 0x4, 0x1E, 0x60, 0x6A, 0xC6, 0x61, 0x80 }; //card 6 Pak Fachri
   uint8_t card7[] =  { 0x4, 0x1C, 0x2E, 0xA, 0x42, 0x2A, 0x80 }; //card 7 Pak Rolly
-  uint8_t card8[] =  { 0x4, 0x60, 0x59, 0xCA, 0x5B, 0x2A, 0x80 }; //card 8 Adit 
-  uint8_t card9[] =  { 0x4, 0x84, 0x7A, 0x5A, 0x81, 0x2A, 0x80 }; //card 9 Rifa
+  uint8_t card8[] =  { 0, 0, 0, 0, 0, 0, 0 }; //card 8   
+  uint8_t card9[] =  { 0, 0, 0, 0, 0, 0, 0 }; //card 9 
   uint8_t card10[] =  { 0x4, 0x8B, 0x47, 0xE2, 0x3, 0x2B, 0x80 }; //card 10 Asep 
-  uint8_t card11[] =  { 0x4, 0x8A, 0x61, 0xBA, 0x41, 0x2A, 0x80 }; //card 11 Faisal
+  uint8_t card11[] =  { 0, 0, 0, 0, 0, 0, 0 }; //card 11 
   uint8_t card12[] =  { 0x4, 0x42, 0x79, 0xB2, 0x4E, 0x44, 0x80 }; //card 12 Nia (tingkat 1)
   uint8_t card13[] =  { 0x4, 0x33, 0x3B, 0x4A, 0x5, 0x2B, 0x80 }; //card 13 Pak Yusril
   uint8_t card14[] =  { 0, 0, 0, 0, 0, 0, 0 }; //card 14 
   uint8_t card15[] =  { 0, 0, 0, 0, 0, 0, 0 }; //card 15 
+  uint8_t card16[] =  { 0, 0, 0, 0, 0, 0, 0 }; //card 16 
+  uint8_t card17[] =  { 0, 0, 0, 0, 0, 0, 0 }; //card 17 
+  uint8_t card18[] =  { 0, 0, 0, 0, 0, 0, 0 }; //card 18 
+  uint8_t card19[] =  { 0, 0, 0, 0, 0, 0, 0 }; //card 19 
+  uint8_t card20[] =  { 0, 0, 0, 0, 0, 0, 0 }; //card 20 
+  uint8_t card21[] =  { 0, 0, 0, 0, 0, 0, 0 }; //card 21 
   
 void loop() {
   // put your main code here, to run repeatedly:
@@ -96,6 +102,12 @@ void loop() {
     int card13matches=0;
     int card14matches=0;
     int card15matches=0;
+    int card16matches=0;
+    int card17matches=0;
+    int card18matches=0;
+    int card19matches=0;
+    int card20matches=0;
+    int card21matches=0;
   
     for(i=0;i<7;i++)
     {
@@ -159,6 +171,30 @@ void loop() {
       {
         card15matches++;      
       }
+      if(uid[i] == card16[i])
+      {
+        card16matches++;      
+      }
+      if(uid[i] == card17[i])
+      {
+        card17matches++;      
+      }
+      if(uid[i] == card18[i])
+      {
+        card18matches++;      
+      }
+      if(uid[i] == card19[i])
+      {
+        card19matches++;      
+      }
+      if(uid[i] == card20[i])
+      {
+        card20matches++;      
+      }
+      if(uid[i] == card21[i])
+      {
+        card21matches++;      
+      }
     }
 
     if(card1matches == 7)
@@ -218,6 +254,30 @@ void loop() {
       Unlock();
     }
     if(card15matches == 7)
+    {
+      Unlock();
+    }
+    if(card16matches == 7)
+    {
+      Unlock();
+    }
+    if(card17matches == 7)
+    {
+      Unlock();
+    }
+    if(card18matches == 7)
+    {
+      Unlock();
+    }
+    if(card19matches == 7)
+    {
+      Unlock();
+    }
+    if(card20matches == 7)
+    {
+      Unlock();
+    }
+    if(card21matches == 7)
     {
       Unlock();
     }
